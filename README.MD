@@ -33,7 +33,7 @@ Documented bugs with reproduction steps and expected/actual results:
 1. [Get_book_invalid_id.md](III.Bugs/1.Get_book_invalid_id.md) – Bug for GET book by invalid ID
 2. [Delete_book_invalid_id.md](III.Bugs/2.Delete_book_invalid_id.md) – Bug for DELETE book by invalid ID
 
-> **Note on Bugs:** The bugs documented above resulted from missing validation in the backend. Once proper validation is added (e.g., for IDs, or ratings), these issues should be resolved.
+> **Note on Bugs:** The bugs documented above resulted from missing validation in the backend. Once proper validation is added these issues should be resolved.
 
 ## How to Run the Tests
 
