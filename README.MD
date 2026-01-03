@@ -6,7 +6,7 @@ This project contains test cases and bug reports for a Bookstore API connected t
 
 ## Project Structure
 
-### I. Test Cases
+## I. Test Cases
 Manual test cases for positive and negative scenarios in Markdown format:
 
 1. [Get_all_books.md](I.Test_cases/1.Get_all_books.md) – Get all books
@@ -18,7 +18,7 @@ Manual test cases for positive and negative scenarios in Markdown format:
 7. [Post_book_invalid_rating.md](I.Test_cases/7.Post_book_invalid_rating.md) – Create a book with an invalid rating
 8. [Delete_book_invalid_id.md](I.Test_cases/8.Delete_book_invalid_id.md) – Delete a book with an invalid ID
 
-### II. Postman Imported Tests
+## II. Postman Imported Tests
 Postman collections for automated testing:
 
 - **Negative_tests**  
@@ -27,7 +27,7 @@ Postman collections for automated testing:
 - **Positive_tests**  
   [Bookstore-api-testing.postman_collection.json](II.Postman_imported_tests/Positive_tests/Bookstore-api-testing.postman_collection.json) – contains positive test scenarios
 
-### III. Bugs
+## III. Bugs
 Documented bugs with reproduction steps and expected/actual results:
 
 1. [Get_book_invalid_id.md](III.Bugs/1.Get_book_invalid_id.md) – Bug for GET book by invalid ID
@@ -41,7 +41,7 @@ Documented bugs with reproduction steps and expected/actual results:
 2. For manual tests, follow the steps in each `.md` file.
 3. For automated tests, import the Postman collections into Postman and run them.
 
-## Notes
+### Notes
 
 - Positive test cases ensure the API works as expected.
 - Negative test cases are designed to identify potential bugs and error handling issues.
