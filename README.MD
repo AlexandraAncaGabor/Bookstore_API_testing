@@ -46,7 +46,7 @@ Documented bugs with reproduction steps and expected/actual results:
 - Positive test cases ensure the API works as expected.
 - Negative test cases are designed to identify potential bugs and error handling issues.
 - Bugs are documented with expected vs. actual results, including screenshots if applicable.
-- - Postman collections can be found in [II.Postman_imported_tests](II.Postman_imported_tests)
+- Postman collections can be found in [II.Postman_imported_tests](II.Postman_imported_tests)
 
 
 ✨ Guided by curiosity, committed to quality.
