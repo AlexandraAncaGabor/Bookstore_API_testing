@@ -1,0 +1,766 @@
+{
+	"info": {
+		"_postman_id": "e7c4cc79-ff81-4ac5-b063-76012a2b638b",
+		"name": "Bookstore-api-testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19967737"
+	},
+	"item": [
+		{
+			"name": "Positive_tests",
+			"item": [
+				{
+					"name": "Post",
+					"item": [
+						{
+							"name": "Post_new_book",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Secrets Like Ours\",\n    \"author\": \"S.T. Ashman\",\n    \"genre\": \"Thriller\",\n    \"published_year\": 2025,\n    \"rating\": 3.8,\n    \"status\": \"wishlist\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/books",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post_new_user",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"name\": \"Maria Popescu\",\n        \"email\": \"maria.pop@gmail.com\",\n        \"role\": \"customer\",\n        \"created_at\": \"2026-03-30T18:24:03.000Z\"\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post_new_review",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\n        \"book_id\": 14,\n        \"user_id\": 7,\n        \"rating\": \"3.9\",\n        \"comment\": \"That was really a good book!\",\n        \"review_date\": \"2025-12-29T22:00:00.000Z\"\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/reviews",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"reviews"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Put",
+					"item": [
+						{
+							"name": "Update_new_book",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Secrets Like that bla bla bla\",\n    \"author\": \"S.T. Ashman\",\n    \"genre\": \"Thriller & Mystery\",\n    \"published_year\": 2025,\n    \"rating\": 3.8,\n    \"status\": \"wishlist\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/books/22",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books",
+										"22"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update_user",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"name\": \"Maria Popa\",\n        \"email\": \"maria.popa@gmail.com\",\n        \"role\": \"customer\",\n        \"created_at\": \" \"\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/users/11",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										"11"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update_review",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\n        \"book_id\": 14,\n        \"user_id\": 7,\n        \"rating\": \"2.5\",\n        \"comment\": \"I hated that book!!\",\n        \"review_date\": \" \"\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/reviews/26",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"reviews",
+										"26"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get",
+					"item": [
+						{
+							"name": "Get_all_users",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get_all_books",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/books",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get_book_by_id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/users/8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										"8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get_user_by_id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/users/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get_all_review",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/reviews",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"reviews"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get_review_by_id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/reviews/15",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"reviews",
+										"15"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"item": [
+						{
+							"name": "Delete_book",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/books/22",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books",
+										"22"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete_user",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/users/11",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										"11"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete_review",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/reviews/26",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"reviews",
+										"26"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Negative_tests",
+			"item": [
+				{
+					"name": "Get",
+					"item": [
+						{
+							"name": "Get_book_invalid_id",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "Get_book_non_existing_id",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "Get_users_invalid_id",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "Get_users_non_existing_id",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "Get_review_invalid_id",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "Get_review_non_existing_id",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Post",
+					"item": [
+						{
+							"name": "Post_book_invalid_field",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\":\n    \"author\": \"S.T. Ashman\",\n    \"genre\": \"Thriller\",\n    \"published_year\": 2025,\n    \"rating\": 3.8,\n    \"status\": \"wishlist\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/books",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post_book_invalid_rating",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Secrets Like Ours\",\n    \"author\": \"S.T. Ashman\",\n    \"genre\": \"Thriller\",\n    \"published_year\": 2025,\n    \"rating\": 7,\n    \"status\": \"completed\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/books",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post_user_invalid_email",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"name\": \"Maria Popescu\",\n        \"email\": \"mdh\",\n        \"role\": \"customer\",\n        \"created_at\": \" \"\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post_user_invalid_email",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"name\": \"Ioana XYQ\",\n        \"email\": \" 55hu8\",\n        \"role\": \"customer\",\n        \"created_at\": \" \"\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Put",
+					"item": [
+						{
+							"name": "Put_invalid_id",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Secrets Like Ours\",\n    \"author\": \"S.T. Ashman\",\n    \"genre\": \"Thriller\",\n    \"published_year\": 2025,\n    \"rating\": 3.8,\n    \"status\": \"wishlist\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/books/jfwehfh",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books",
+										"jfwehfh"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Put_book_empty_body",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/books/22",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books",
+										"22"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Put_review_invalid_rating",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\n        \"book_id\": 14,\n        \"user_id\": 7,\n        \"rating\": \"9\",\n        \"comment\": \"I hated that book!!\",\n        \"review_date\": \" \"\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/reviews/26",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"reviews",
+										"26"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"item": [
+						{
+							"name": "Delete_book_invalid_id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/books/jfwehfh",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books",
+										"jfwehfh"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete_user_invalid_id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/users/jdahd",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										"jdahd"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete_review_invalid_id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/reviews/jhfweuh",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"reviews",
+										"jhfweuh"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete_book_nonexisting_id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/books/877",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books",
+										"877"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete_user_nonexisting_id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/users/766",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										"766"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete_review_nonexisting_id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/reviews/766",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"reviews",
+										"766"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
